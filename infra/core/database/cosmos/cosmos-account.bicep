@@ -27,6 +27,7 @@ resource cosmos 'Microsoft.DocumentDB/databaseAccounts@2022-08-15' = {
     enableAutomaticFailover: false
     enableMultipleWriteLocations: false
     apiProperties: (kind == 'MongoDB') ? { serverVersion: '4.2' } : {}
+  }
 }
 
 resource cosmosConnectionString 'Microsoft.KeyVault/vaults/secrets@2022-07-01' = {

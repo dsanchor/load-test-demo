@@ -16,6 +16,7 @@ module cosmos '../../cosmos/cosmos-account.bicep' = {
     kind: 'MongoDB'
     tags: tags
   }
+  
 }
 
 output connectionStringKey string = cosmos.outputs.connectionStringKey

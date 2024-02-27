@@ -24,6 +24,9 @@ resource database 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2022-0
   tags: tags
   properties: {
     resource: { id: databaseName }
+    options: {
+      throughput: 500
+    }
   }
 
   resource list 'collections' = [for collection in collections: {

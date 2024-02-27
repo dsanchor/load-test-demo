@@ -8,12 +8,18 @@ param collections array = [
     id: 'TodoList'
     shardKey: 'Hash'
     indexKey: '_id'
+    options: {
+      throughput: 100
+    }
   }
   {
     name: 'TodoItem'
     id: 'TodoItem'
     shardKey: 'Hash'
     indexKey: '_id'
+    options: {
+      throughput: 100
+    }
   }
 ]
 param databaseName string = ''
